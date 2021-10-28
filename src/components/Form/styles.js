@@ -7,9 +7,11 @@ export const styles = StyleSheet.create({
     bottom: 0,
     backgroundColor: "#fff",
     alignItems: "center",
-    marginTop: 30,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
+    justifyContent: "flex-start",
+    paddingTop: 10,
+    marginTop: 10,
   },
   form: {
     width: "100%",
@@ -44,5 +46,28 @@ export const styles = StyleSheet.create({
     paddingBottom: 14,
     marginLeft: 12,
     marginTop: 30,
+  },
+  errorMessage: {
+    fontSize: 12,
+    color: "red",
+    fontWeight: "bold",
+    paddingLeft: 20,
+  },
+  exhibitionResultImc: {
+    width: "100%",
+    height: "50%",
+  },
+  listImc: {
+    marginTop: 20,
+  },
+  resultImcItem: {
+    fontSize: 26,
+    color: "red",
+    height: 50,
+    width: "100%",
+    paddingRight: 20,
+  },
+  textResultItemList: {
+    fontSize: 16,
   },
 });
