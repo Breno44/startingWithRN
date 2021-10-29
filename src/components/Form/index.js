@@ -24,7 +24,10 @@ export function Form() {
 
   function imcCalculator(height, weight) {
     let heightFormat = height.replace(",", ".");
-    const totalImc = (weight / (height * height)).toFixed(2);
+    let heightDefinitive = heightFormat.replace("-", "");
+    let weightFormat = height.replace(",", ".");
+    let weightDefinitive = weightFormat.replace("-", "");
+    const totalImc = (weightDefinitive / (heightDefinitive * heightDefinitive)).toFixed(2);
     setImcList((arr) => [...arr, { id: new Date().getDate(), imc: totalImc }]);
     setImc(totalImc);
   }
@@ -37,7 +40,7 @@ export function Form() {
   }
 
   function validatorImc() {
-    if (weight != null && height != null) {
+    if (weight != null && height != null && weight != 0 && height != 0) {
       imcCalculator(height, weight);
       setHeight(null);
       setWeight(null);
